@@ -43,9 +43,29 @@ class StudentUpdateMutationModel(graphene.Mutation):
         return StudentUpdateMutationModel(student=student)
     
 
+class StudentDeleteMutationModel(graphene.Mutation):
+    class Arguments:
+        id = graphene.ID(required=True)
+        name = graphene.String()
+        marks = graphene.Int()
+        grade = graphene.String()
+
+    student = graphene.Field(StudentObjectType)
+
+    def mutate(self, info, id, **kwargs):
+        try:
+            student = Student.objects.get(pk=id, **kwargs)
+        except Student.DoesNotExist:
+            raise Exception("Student with the provided ID does not exist.")
+
+        student.delete()
+        return StudentDeleteMutationModel(student=student)
+
+
 class Mutation(graphene.ObjectType):
     create_student_entry = StudentCreationMutationModel.Field()
     update_student_entry = StudentUpdateMutationModel.Field()
+    delete_student_entry = StudentDeleteMutationModel.Field()
 
 
 class Query(graphene.ObjectType):
