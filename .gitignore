@@ -1,1 +1,5 @@
 env/
+students/migrations/
+students/__pycache__/
+demo_graphql/__pycache__/
+demo_graphql/migrations/
