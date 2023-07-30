@@ -39,7 +39,6 @@ args:
 ```
 Mutation to create a student entry
 ```
-
 mutation {
   createStudentEntry (name: "yami_1", marks:25, grade: "2") {
     student{
