@@ -9,11 +9,15 @@ class StudentObjectType(DjangoObjectType):
         fields = ("name", "marks", "date_of_admission", "grade")
 
 class Query(graphene.ObjectType):
+    all_students = graphene.List(StudentObjectType, grade=graphene.String(required=False), limit=graphene.Int(required=False))
 
-    all_students = graphene.List(StudentObjectType)
 
+    def resolve_all_students(root, info, grade=None, limit=None):
+        api_filter = {'grade': grade} if grade else {}
+        if limit:
+            return Student.objects.filter(**api_filter).order_by('-date_of_admission')[:limit]
+        return Student.objects.filter(**api_filter)
+      
 
-    def resolve_all_students(root, info):
-        return Student.objects.all()
 
 student_schema = graphene.Schema(query=Query)
