@@ -1,6 +1,6 @@
 # Documentation
 
-This is a Django project that consists of two apps - `user` and `article`. The `user` app provides functionality for user registration, authentication, and password management, while the `article` app allows users to create, view, update, and delete articles.
+This Django project consists of 1 app - `students`
 
 ## Requirements
 
@@ -19,9 +19,12 @@ To run this project, you will need to have the following installed on your syste
 
 ## Usage
 
-Request to endpoint to filter all students based on grade or use it without filter.
+Request the endpoint to filter all students based on grade or use it without a filter.
 endpoint: `http://127.0.0.1:8000/students/graphql/`
 writhe the query.
 
 #### Screenshots for reference:
  
+![Screenshot 2023-07-30 at 8 21 49 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/c3dea994-6938-4694-87e6-6fc5dfa07d6e)
+![Screenshot 2023-07-30 at 10 17 33 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/901f2bc9-0669-4235-9d27-62eb0b79353c)
+![Screenshot 2023-07-30 at 10 18 13 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/e1b2188c-0a40-476b-a59b-e34e5705c69f)
