@@ -6,7 +6,7 @@ from .constants import GradeTypes
 
 class Student(models.Model):
     name = models.CharField(max_length=100)
-    marks = models.TextField()
+    marks = models.IntegerField()
     date_of_admission = models.DateField(auto_now_add=True)
     grade = models.CharField(choices=GradeTypes.choices, max_length=3)
 
