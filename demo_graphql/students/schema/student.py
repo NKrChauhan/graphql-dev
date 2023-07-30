@@ -19,5 +19,20 @@ class Query(graphene.ObjectType):
         return Student.objects.filter(**api_filter)
       
 
+class StudentMutationModel(graphene.Mutation):
+    class Arguments:
+        name = graphene.String(required=True)
+        grade = graphene.String(required=True)
+        marks = graphene.Int(required=False)
 
-student_schema = graphene.Schema(query=Query)
+    student = graphene.Field(StudentObjectType)
+
+    def mutate(self, info, name, grade, **kwargs):
+        student = Student.objects.create(name=name, grade=grade, **kwargs)
+        return StudentMutationModel(student=student)
+
+class Mutation(graphene.ObjectType):
+    create_student_entry = StudentMutationModel.Field()
+
+
+student_schema = graphene.Schema(query=Query, mutation=Mutation)
