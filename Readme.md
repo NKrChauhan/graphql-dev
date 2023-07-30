@@ -1,6 +1,6 @@
 # Documentation
 
-This Django project consists of 1 app - `students`
+This Django project consists of 1 app - `students` performing CRUD operation using GraphQL API
 
 ## Requirements
 
@@ -21,9 +21,9 @@ To run this project, you will need to have the following installed on your syste
 
 Request the endpoint to filter all students based on grade or use it without a filter.
 endpoint: `http://127.0.0.1:8000/students/graphql/`
-writhe the query.
+write the query.
 
-#### Screenshots for reference:
+#### Request query with Screenshots for reference:
 
  Read query:
 ```
@@ -37,7 +37,7 @@ args:
 - grade - filter based on grade (not required field)
 - limit - limit on number of records (not required field)
 ```
-Mutation Query to create a student entry
+Mutation to create a student entry
 ```
 
 mutation {
@@ -55,8 +55,29 @@ args:
 - marks - not required field
 - name - required filed 
 ```
-![Screenshot 2023-07-30 at 10 35 24 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/bd0a6f9f-915f-4e6a-9854-6a6a417a17cc)
+Mutation to update student using id
+```
+mutation{
+  updateStudentEntry(id:1, name: "greg"){
+    student{
+      grade
+      dateOfAdmission
+      name
+    }
+  }
+}
+args:
+- id - required filed 
+- grade - required field
 
-![Screenshot 2023-07-30 at 8 21 49 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/c3dea994-6938-4694-87e6-6fc5dfa07d6e)
+- marks - not required field
+- name - required filed 
+```
+
+![Screenshot 2023-07-30 at 8 21 49 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/c3dea994-6938-4694-87e6-6fc5dfa07d6e) 
 
 ![Screenshot 2023-07-30 at 10 18 13 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/e1b2188c-0a40-476b-a59b-e34e5705c69f)
+
+![Screenshot 2023-07-30 at 10 35 24 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/bd0a6f9f-915f-4e6a-9854-6a6a417a17cc)
+
+![Screenshot 2023-07-30 at 11 04 38 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/8001f903-38f4-49de-8757-01278ac2a0ea)
