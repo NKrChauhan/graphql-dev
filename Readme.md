@@ -55,7 +55,7 @@ args:
 - marks - not required field
 - name - required filed 
 ```
-Mutation to update student using id
+Mutation to update student using id with other parameters to update
 ```
 mutation{
   updateStudentEntry(id:1, name: "greg"){
@@ -69,15 +69,37 @@ mutation{
 args:
 - id - required filed 
 - grade - required field
-
 - marks - not required field
 - name - required filed 
 ```
+Mutation to delete student using id and other filters
+```
+mutation{
+  deleteStudentEntry(id:1, name: "some"){
+    student{
+      grade
+      dateOfAdmission
+      name
+    }
+  }
+}
+args:
+- id - required filed 
+- grade - required field
+- marks - not required field
+- name - required filed 
+```
+> Read Query
+  ![Screenshot 2023-07-30 at 8 21 49 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/c3dea994-6938-4694-87e6-6fc5dfa07d6e) 
 
-![Screenshot 2023-07-30 at 8 21 49 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/c3dea994-6938-4694-87e6-6fc5dfa07d6e) 
+> Delete Mutation
+  ![Screenshot 2023-07-30 at 11 21 03 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/7c4150d6-d921-42ce-9bc0-999eb8fcada7)
 
-![Screenshot 2023-07-30 at 10 18 13 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/e1b2188c-0a40-476b-a59b-e34e5705c69f)
+> Read Query
+  ![Screenshot 2023-07-30 at 10 18 13 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/e1b2188c-0a40-476b-a59b-e34e5705c69f)
 
-![Screenshot 2023-07-30 at 10 35 24 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/bd0a6f9f-915f-4e6a-9854-6a6a417a17cc)
+> Create Mutation
+  ![Screenshot 2023-07-30 at 10 35 24 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/bd0a6f9f-915f-4e6a-9854-6a6a417a17cc)
 
-![Screenshot 2023-07-30 at 11 04 38 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/8001f903-38f4-49de-8757-01278ac2a0ea)
+> Update Mutation
+  ![Screenshot 2023-07-30 at 11 04 38 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/8001f903-38f4-49de-8757-01278ac2a0ea)
