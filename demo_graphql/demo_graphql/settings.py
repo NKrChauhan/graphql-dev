@@ -47,6 +47,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Custom Apps
+    'students',
+    # Third party Apps
+    'graphene_django',
 ]
 
 ROOT_URLCONF = 'demo_graphql.urls'
