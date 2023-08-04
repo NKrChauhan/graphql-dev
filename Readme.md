@@ -89,16 +89,16 @@ args:
 - name - required filed 
 ```
 > Read Query
-  ![Screenshot 2023-07-30 at 8 21 49 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/c3dea994-6938-4694-87e6-6fc5dfa07d6e) 
+  ![Screenshot 2023-07-30 at 8 21 49 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/c4097512-58ec-4f44-b51f-9db0d40e32a3)
 
 > Delete Mutation
-  ![Screenshot 2023-07-30 at 11 21 03 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/7c4150d6-d921-42ce-9bc0-999eb8fcada7)
+  ![Screenshot 2023-07-30 at 11 21 03 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/f86d346c-4476-4e2d-aad7-f5bf906b5fc0)
 
 > Read Query
-  ![Screenshot 2023-07-30 at 10 18 13 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/e1b2188c-0a40-476b-a59b-e34e5705c69f)
+  ![Screenshot 2023-07-30 at 10 17 33 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/ef4ec314-9568-4c3a-901e-5121141d2a9d)
 
 > Create Mutation
-  ![Screenshot 2023-07-30 at 10 35 24 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/bd0a6f9f-915f-4e6a-9854-6a6a417a17cc)
+  ![Screenshot 2023-07-30 at 10 35 24 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/c9b7fd77-9ef2-4cad-bef2-f36035f82f7f)
 
 > Update Mutation
-  ![Screenshot 2023-07-30 at 11 04 38 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/8001f903-38f4-49de-8757-01278ac2a0ea)
+  ![Screenshot 2023-07-30 at 11 04 38 PM](https://github.com/NKrChauhan/graphql-dev/assets/40715943/061c5588-8d91-49b4-b5e1-0637a46e2798)
